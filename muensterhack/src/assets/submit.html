@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="utf-8" />
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- nouislider -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css" integrity="sha512-40vN6DdyQoxRJCw0klEUwZfTTlcwkOLKpP8K8125hy9iF4fi8gPpWZp60qKC6MYAFaond8yQds7cTMVU8eMbgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js" integrity="sha512-jWNpWAWx86B/GZV4Qsce63q5jxx/rpWnw812vh0RE+SBIo/mmepwOSQkY2eVQnMuE28pzUEO7ux0a5sJX91g8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- only show tooltips during sliding-->
+        <style>
+            .noUi-tooltip {
+                display: none;
+            }
+            .noUi-active .noUi-tooltip {
+                display: block;
+            }
+        </style>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <div class="container">
+         <div class="row">
+            <h5><i class="material-icons">lightbulb_outline</i> <i>SUBMIT</i> - Idee einreichen</h5>
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="titel" type="text" class="validate">
+                  <label for="titel">Titel der Idee</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="ideengeber" type="text" class="validate">
+                  <label for="ideengeber">Ideengeber</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="herkunft" type="text" class="validate">
+                    <label for="herkunft">Projekt-Herkunft/Quelle</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="lizenz" type="text" class="validate">
+                    <label for="lizenz">Lizenz</label>
+                </div>
+                <div class="input-field col s6">
+                    <select multiple>
+                      <option value="" disabled selected>Themengebiet(e)</option>
+                      <option value="1">Kultur / Kunst</option>
+                      <option value="2">Nachhaltigkeit</option>
+                      <option value="3">Freizeit</option>
+                    </select>
+                    <label>Themengebiet(e)</label>
+                </div>
+                <div class="input-field col s6">
+                    <select multiple>
+                      <option value="" disabled selected>Raumbezug</option>
+                      <option value="1">Münster übergreifend</option>
+                      <option value="2">Ganz Münster</option>
+                      <option value="3">Münster Nord</option>
+                      <option value="3">Münster Ost</option>
+                      <option value="3">Münster West</option>
+                      <option value="3">Münster Süd-Ost</option>
+                      <option value="3">Münster Hiltrup</option>
+                    </select>
+                    <label>Raumbezug</label>
+                </div>
+                <div class="input-field col s6">
+
+                    <div id="checkbox" class="section scrollspy">
+                        <p>Was benötigt das Projekt?
+                        </p>
+                        <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Räume</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input type="checkbox"  />
+                            <span>Moneten</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input type="checkbox"  />
+                            <span>Personen</span>
+                        </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox"  />
+                                <span>Sonstiges, siehe rechts:</span>
+                            </label>
+                            </p>
+
+
+
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                    <p>
+                    <input id="email_inline" type="email" class="validate">
+                    <label for="email_inline">Weitere benötigte Dinge</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Falls Du für Dein Projekt andere Ressourcen benötigst, schreibe Sie bitte in dieses Feld</span>
+                    </p>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Gibt es bereits Beispiel-Umsetzungen?</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s6">
+
+                    <div id="checkbox" class="section scrollspy">
+                        <p> Projektstatus (Reifegrad)
+                        </p>
+                        <div id="test-slider"></div>
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                    <p>  Skalierbarkeit auf andere Regionen </p>
+                    <div class="switch">
+                        <label>
+                        Nein
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        Ja
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="right">
+                        <a class="waves-effect waves-light btn-large"><i class="material-icons right">assignment_turned_in</i>Abschicken</a>
+                    </div>
+                </div>
+
+            </div>
+
+            </form>
+          </div>
+        </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+        });
+        var slider = document.getElementById('test-slider');
+        noUiSlider.create(slider, {
+        start: 0,
+        step: 1,
+        tooltips: [true],
+        pips: {
+                mode: 'steps',
+                density: 4
+            },
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+            'min': 0,
+            'max': 10
+        }});
+
+    </script>
+    </body>
+  </html>

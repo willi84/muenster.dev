@@ -1,0 +1,75 @@
+
+<div class="bg--overview" fxLayoutAlign="center center">
+    <div class="content container"  fxLayout="row" fxLayout.xs="column" fxFlexFill>
+
+		<div fxFlex="33" class="card" [routerLink]="['/submit']">
+            <mat-card class="example-card">
+                <!-- <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Shiba Inu</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header> -->
+                <h1 class="subtitle">Submit</h1>
+                <img mat-card-image class="plant" src="./assets/pflanze1.png" width="281" height="400" alt="Pflanze">
+                <mat-card-content>
+                    <p class="description">
+                        Share your idea with others on out plattform.<br />&nbsp;
+                       </p>
+                </mat-card-content>
+                <!-- <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions> -->
+              </mat-card>
+		</div>
+		<div fxFlex="33" class="card" [routerLink]="['/dashboard']">
+            <mat-card class="example-card">
+                <!-- <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Shiba Inu</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header> -->
+                <h1 class="subtitle">Match</h1>
+                <img mat-card-image class="plant" src="./assets/pflanze2.png" width="281" height="400" alt="Pflanze">
+                <mat-card-content>
+                    <p class="description">
+                        We check your ideas with existing ideas and match with partners.
+                       </p>
+                </mat-card-content>
+                <!-- <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions> -->
+              </mat-card>
+		</div>
+		<div fxFlex="33" class="card" [routerLink]="['/dashboard']">
+            <mat-card class="example-card">
+                <!-- <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Shiba Inu</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header> -->
+                <h1 class="subtitle">Dashboard</h1>
+                <img mat-card-image class="plant" src="./assets/pflanze3.png" width="281" height="400" alt="Pflanze">
+                <mat-card-content>
+                  <p class="description">
+                   We help to bring your idead to life.<br />&nbsp;
+                  </p>
+                </mat-card-content>
+                <!-- <mat-card-actions>
+                  <button mat-button>GO</button>
+                </mat-card-actions> -->
+              </mat-card>
+		</div>
+
+	</div>
+
+    <mat-grid-list cols="3">
+        <mat-grid-tile>
+           
+
+        </mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+      </mat-grid-list>
+</div>

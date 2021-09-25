@@ -26,6 +26,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {AppRouters} from './app.routes';
 import {DataService} from './data/data.service';
+import { OverviewComponent } from './overview/overview.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { SubmitComponent } from './submit/submit.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -37,7 +43,9 @@ import {DataService} from './data/data.service';
   declarations: [
     AppComponent,
     WelcomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    OverviewComponent,
+    SubmitComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +71,10 @@ import {DataService} from './data/data.service';
     FlexLayoutModule,
     AppRouters,
     MatTableModule,
+    MatGridListModule,
+    MatTableModule,
+    MatTabsModule,
+    FormsModule
     
   ],
   providers: [DataService],
