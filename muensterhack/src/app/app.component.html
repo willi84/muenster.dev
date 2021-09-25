@@ -25,8 +25,12 @@
      </div>
      <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
         <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-          <li *ngFor="let navigation of menu"  [routerLink]="['/', navigation.link]">
-            <a>
+          <li *ngFor="let navigation of menu" >
+            <a [routerLink]="['/', navigation.link]" *ngIf="navigation.isLogin == undefined">
+              <mat-icon class="icon">{{navigation.icon}}</mat-icon>
+              <span  class="label">{{navigation.title}}</span>
+             </a>
+            <a (click)="isLoggedIn = !isLoggedIn" *ngIf="navigation.isLogin != undefined && navigation.isLogin == isLoggedIn">
               <mat-icon class="icon">{{navigation.icon}}</mat-icon>
               <span  class="label">{{navigation.title}}</span>
              </a>

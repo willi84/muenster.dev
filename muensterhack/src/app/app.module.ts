@@ -31,6 +31,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { SubmitComponent } from './submit/submit.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
+import { MatchComponent } from './match/match.component';
+import { ChartModule } from 'angular2-chartjs';
 
 
 
@@ -45,7 +47,8 @@ import { FormsModule } from '@angular/forms';
     WelcomeComponent,
     DashboardComponent,
     OverviewComponent,
-    SubmitComponent
+    SubmitComponent,
+    MatchComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ import { FormsModule } from '@angular/forms';
     MatGridListModule,
     MatTableModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    ChartModule
     
   ],
   providers: [DataService],

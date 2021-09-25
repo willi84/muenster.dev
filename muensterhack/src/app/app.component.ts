@@ -7,11 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'muensterhack';
+  isLoggedIn = false;
   menu = [
-    {title: 'Home', icon: 'home', link: ''},
-    {title: 'Login', icon: 'input', link: 'login'},
+    {title: 'Home', icon: 'home', link: 'home'},
     {title: 'Overview', icon: 'explore', link: 'overview'},
-    {title: 'Dashboard', icon: 'dashboard', link: 'dashboard'},
-    // {title: 'Logout', icon: 'input'},
+    {title: 'Match', icon: 'favorite', link: 'match'},
+    {title: 'Dashboard', icon: 'assessment', link: 'dashboard'},
+    {title: 'Login ', icon: 'input', link: 'login', isLogin: false},
+    {title: 'Logout', icon: 'input', isLogin: true},
   ]
 }
